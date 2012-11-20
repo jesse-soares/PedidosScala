@@ -1,0 +1,49 @@
+<h1 class="title">Visualizar Pedido</h1>
+<hr/>
+
+<span>
+	<div class="well well-small">
+		<dl class="dl-horizontal">
+			<dt ng-show="pedido.id">Número:</dt><dd>{{pedido.id}}</dd>
+			<dt ng-show="pedido.data">Data:</dt><dd>{{pedido.data}}</dd>
+			<dt ng-show="pedido.data">Cliente:</dt><dd>{{pedido.cliente.nome}}</dd>
+			<dt ng-show="pedido.valor">Preço:</dt><dd>R$ {{pedido.valor}}</dd>
+			<dt ng-show="pedido.status.nome">Status:</dt><dd>{{pedido.status.nome}}</dd>
+		</dl>
+	</div>
+</span>
+
+<span ng-show="pedido.areaCalculavel">
+	<legend>Dados do Estacionamento</legend>
+	<div class="well well-small">
+		<dl class="dl-horizontal">
+			<dt ng-show="pedido.areaCalculavel.areaSimulacao">Área Simulada:</dt><dd>{{pedido.areaCalculavel.areaSimulacao}} m²</dd>
+			<span ng-show="pedido.areaCalculavel.areaReal"><dt>Área Real:</dt><dd>{{pedido.areaCalculavel.areaReal}} m²</dd></span>
+			<dt ng-show="pedido.areaCalculavel.arquivoInicial">Arquivo Inicial:</dt><dd>{{pedido.areaCalculavel.arquivoInicial}}</dd>
+			<dt ng-show="pedido.areaCalculavel.arquivoFinal">Arquivo Final:</dt><dd>{{pedido.areaCalculavel.arquivoFinal}}</dd>
+		</dl>
+	</div>
+</span>
+
+<span ng-show="pedido.pagamento">
+	<legend>Pagamento</legend>
+	<div class="well well-small">
+		<dl class="dl-horizontal">
+			<dt ng-show="pedido.pagamento.data">Data:</dt><dd>{{pedido.pagamento.data}}</dd>
+			<dt ng-show="pedido.pagamento.formaPagamento.nome">Forma de Pagamento:</dt><dd>{{pedido.pagamento.formaPagamento.nome}}</dd>
+		</dl>
+	</div>
+</span>
+
+<div class="control-group">
+	<div class="controls">
+
+		<a class="btn btn-large btn-primary" href="#/pedidos">
+			<i class="icon-th-list icon-white"></i> Listar Pedidos
+		</a>
+
+		<a class="btn btn-large btn-primary" ng-show="pedidoAguardandoPagamento()" ng-click="realizarPagamento()">
+			<i class="icon-shopping-cart icon-white"></i> Realizar Pagamento
+		</a>
+	</div>
+</div>

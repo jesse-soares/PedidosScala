@@ -1,0 +1,31 @@
+<h1 class="title">Confirmação da Simulação</h1>
+<hr/>
+
+<div class="well">
+	<dl class="dl-horizontal">
+		<dt>Área:</dt><dd>{{area}} m²</dd>
+		<dt>Preço Calculado:</dt><dd>R$ {{preco}}</dd>
+	</dl>
+</div>
+
+<legend>
+	O que deseja fazer?
+</legend>
+
+<div class="menuBtn">
+	<a class="btn btn-large btn-primary btn-block" ng-click="continuarPedido()">
+		<i class="icon-ok icon-white"></i> Continuar e enviar arquivo para processamento
+	</a>
+</div>
+
+<div class="menuBtn">
+	<a class="btn btn-large btn-primary btn-block" ng-click="init()">
+		<i class="icon-repeat icon-white"></i> Voltar e fazer nova simulação de preço
+	</a>
+</div>
+
+<div class="menuBtn">
+	<a class="btn btn-large btn-primary btn-block" href="#/">
+		<i class="icon-remove icon-white"></i> Cancelar e voltar para página inicial
+	</a>
+</div>

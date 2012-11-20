@@ -1,0 +1,30 @@
+<h1 class="title">Simulação de Preço</h1>
+<hr/>
+
+<div class="alert alert-error" ng-show="error">
+  {{errorMessage}}
+</div>
+
+<form class="form-horizontal">
+  
+	<div class="control-group">
+		<label class="control-label" for="area">
+			Digite a área para simular o preço:
+		</label>
+		<div class="controls">
+			<div class="input-append">
+				<input class="span2" id="area" type="number" required="required" placeholder="Área" ng-model="area">
+				<span class="add-on">m²</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="controls">
+			<a class="btn btn-large btn-primary" ng-click="simularPreco()">
+				<i class="icon-play icon-white"></i> Simular
+			</a>
+		</div>
+	</div>
+
+</form>

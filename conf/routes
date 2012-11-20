@@ -1,0 +1,35 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Servicos
+GET     /areasCalculaveis           	controllers.AreasCalculaveis.listar
+GET     /clientes		            	controllers.Clientes.listar
+GET     /clientes/:id		            controllers.Clientes.buscarPorId(id: Long)
+GET     /estacionamentos           		controllers.Estacionamentos.listar
+GET     /estacionamentos/:id            controllers.Estacionamentos.buscarPorId(id: Long)
+GET     /estacionamentoParametros   	controllers.EstacionamentoParametros.listar
+GET     /estacionamentoParametros/:id   controllers.EstacionamentoParametros.buscarPorId(id: Long)
+GET     /formasPagamento            	controllers.FormasPagamento.listar
+GET     /formasPagamento/:id            controllers.FormasPagamento.buscarPorId(id: Long)
+GET     /pagamentos       				controllers.Pagamentos.listar
+GET     /parametros       				controllers.Parametros.listar
+GET     /parametros/:id       			controllers.Parametros.buscarPorId(id: Long)
+GET     /pedidos	      				controllers.Pedidos.listar
+POST    /pedidos	      				controllers.Pedidos.inserir
+GET     /pedidos/simulaValor/:area      controllers.Pedidos.simularValor(area: Long)
+GET     /pedidos/realizaPagamento/:id   controllers.Pedidos.realizarPagamento(id: Long)
+GET     /pedidos/:id               		controllers.Pedidos.buscarPorId(id: Long)
+GET     /pedidos/remover/:id            controllers.Pedidos.remover(id: Long)
+GET     /status            				controllers.Status.listar
+GET     /status/:id           			controllers.Status.buscarPorId(id: Long)
+
+# Simulacoes
+POST	/EnterpriseServiceBus/resources/ESBReceiver 			controllers.Simulacao.ESBReceiver
+POST	/EnterpriseServiceBus/resources/EstacionamentoReceiver 	controllers.Simulacao.EstacionamentoReceiver
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               	controllers.Assets.at(path="/public", file)
+
+# Home page
+GET     /*file		      				controllers.Assets.at(path="/public", file)

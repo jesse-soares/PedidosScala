@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8"/>
+		<title>::. Calcula Estacionamento .::</title>
+
+		<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+	</head>
+
+<body ng-app="estacionamentoApp">
+
+	<header class="navbar navbar-inverse" style="position: static;">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Calcula Estacionamento</a>
+          <div class="nav-collapse collapse navbar-inverse-collapse">
+            <ul class="nav pull-right">
+              <li><a href="#modalSobre" role="button" data-toggle="modal">
+              	<i class="icon-info-sign icon-white"></i> Sobre</a>
+              </li>
+              <li class="divider-vertical"></li>
+              <li><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+            </ul>
+          </div><!-- /.nav-collapse -->
+        </div>
+      </div><!-- /navbar-inner -->
+    </header>
+
+	<div id="modalSobre" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalSobreLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	    <h3 id="modalSobreLabel">Sobre</h3>
+	  </div>
+	  <div class="modal-body">
+	    <p>Este trabalho teve o objetivo de criar uma aplicação Web utilizando a linguagem de programação Scala.</p>
+		<p>O domínio do problema é um site em que o cliente faz um pedido de cálculo de uma área de estacionamento.</p>
+	    <legend>Tecnologias Utilizadas:</legend>
+	    <p><strong>Back-end:</strong> Scala, Play!Framework 2.0</p>
+	    <p><strong>Front-end:</strong> HTML5, CSS Twitter Bootstrap, Google AngularJS</p>
+	  </div>
+	  <div class="modal-footer">
+	    <a class="btn btn-primary" data-dismiss="modal" aria-hidden="true">
+			<i class="icon-remove icon-white"></i> Fechar
+		</a>
+	  </div>
+	</div>
+
+	<div class="container" ng-view></div>
+
+	<script type="text/javascript" src="javascripts/lib/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="javascripts/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="javascripts/lib/angular.min.js"></script>
+
+	<script type="text/javascript" src="javascripts/module.js"></script>
+	<script type="text/javascript" src="javascripts/controllers/pedidos.js"></script>
+</body>
+
+</html>
